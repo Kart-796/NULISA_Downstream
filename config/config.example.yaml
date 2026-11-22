@@ -1,0 +1,22 @@
+# =============================================================================
+# Project configuration
+#
+#   cp config/config.example.yaml config/config.yaml   # then edit config.yaml
+#
+# config/config.yaml is git-ignored, so your real paths and sample names never
+# get committed. Relative paths are resolved against the repository root.
+# Each folder holds the input files of its analysis (see README) and receives its outputs.
+# =============================================================================
+
+paths:
+  de_workdir:             "data/differential_abundance"  # analysis/01  (Raw Data.csv)
+  druga_workdir:          "data/druga_serum_csf"         # analysis/02a-c
+  longitudinal_workdir:   "data/csf_longitudinal"        # analysis/03
+  genetic_groups_workdir: "data/genetic_groups"          # analysis/04
+  correlation_workdir:    "data/correlations"            # analysis/05a-b
+
+# Samples excluded from selected comparisons. Use the exact SampleName / column name
+# from your data. Kept here so that real sample names never appear in the code.
+exclude_samples:
+  sample_1: "<sample name excluded from the MutB comparisons>"
+  sample_2: "<sample name excluded from the 'wo_noMut_pat' comparisons>"

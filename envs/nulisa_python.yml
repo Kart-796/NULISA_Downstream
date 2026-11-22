@@ -1,0 +1,21 @@
+# Python environment for the NULISA notebooks (analysis/02-05).
+#   conda env create -f envs/nulisa_python.yml
+name: nulisa_python
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - openpyxl           # reading .xlsx inputs
+  - pyyaml
+  - ipykernel
+  - pip
+  - pip:
+      - pydeseq2
+      - matplotlib-venn
+      - adjustText
